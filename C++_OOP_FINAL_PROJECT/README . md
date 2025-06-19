@@ -1,0 +1,90 @@
+ Hotel Reservation System
+
+A console-based hotel room reservation management system written in C++.
+
+ Overview
+
+This program allows hotel staff to manage room reservations through a simple menu-driven interface. It supports two types of rooms (Budget and Deluxe) and provides comprehensive reservation management functionality.
+
+ Features
+
+ Room Types
+- Budget Room: $45 per night
+- Deluxe Room: $140 per night
+
+ Core Functionality
+1. Add Rooms: Create new Budget or Deluxe rooms with unique IDs
+2. Remove Rooms: Delete rooms by their ID
+3. Make Reservations: Book rooms for specific dates
+4. Check Reservations: Verify if a room is booked on a particular date
+5. View Reservations: Display all reservations for a specific room
+6. Check Availability: See which rooms are available on a given date
+7. Show All Reservations: Display reservations for all rooms
+8. Show Hotel Rooms: List all rooms with their details
+
+ Technical Features
+
+- Object-Oriented Design: Uses inheritance with abstract base class `RoomBase`
+- Dynamic Memory Management: Automatically expands reservation capacity as needed
+- Polymorphism: Virtual functions for room-specific behavior
+- Date Management: Custom `Date` struct with formatting and comparison
+- Memory Safety: Proper cleanup of dynamically allocated memory
+
+How to Use
+
+1. Compile the program:
+   
+  
+2. Run the program:
+   ./hotel_system
+   
+
+3. Follow the menu prompts:
+   - Start by adding rooms (options 1-2)
+   - Make reservations using room IDs (option 4)
+   - Check availability and manage bookings (options 5-9)
+
+ Menu Options
+
+1. Add Budget Room
+2. Add Deluxe Room
+3. Remove Room by ID
+4. Make Reservation by Room ID
+5. Check Reservation by Room ID
+6. View Reservations by Room ID
+7. Check Availability for Date
+8. Show All Reservations
+9. Show Hotel Rooms
+0. Exit
+
+
+ Date Format
+
+Enter dates in the format: 
+
+ System Requirements
+
+- C++ compiler with C++11 support or later
+- Standard C++ libraries (iostream, iomanip, string)
+
+Code Structure
+
+- Date struct: Handles date operations and formatting
+- RoomBase class: Abstract base class for all room types
+- BudgetRoom/DeluxeRoom classes: Concrete room implementations
+- Global arrays: Store rooms and their IDs dynamically
+- Utility functions: Handle menu display, input, and operations
+
+ Memory Management
+
+The system uses dynamic memory allocation for:
+- Room storage arrays (expanded as needed)
+- Individual room reservation lists (auto-expanding)
+- Proper cleanup on program exit
+
+ Error Handling
+
+- Duplicate room ID prevention
+- Invalid room ID detection
+- Double-booking prevention
+- Input validation for menu choices
